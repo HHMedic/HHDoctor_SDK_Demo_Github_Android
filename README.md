@@ -1,8 +1,9 @@
 ## 和缓视频医生Android SDK对接文档 3.6.8（快速接入版本）
 
-[和缓视频医生SDK音箱版本接入文档](HHDoctor_SDK_SOUND.md)
+[//]: # ([和缓视频医生SDK音箱版本接入文档]&#40;HHDoctor_SDK_SOUND.md&#41;)
 
-[和缓视频医生SDK电视版本接入文档](HHDoctor_SDK_TV.md)
+[//]: # ()
+[//]: # ([和缓视频医生SDK电视版本接入文档]&#40;HHDoctor_SDK_TV.md&#41;)
 
 ### 一、引入SDK
 
