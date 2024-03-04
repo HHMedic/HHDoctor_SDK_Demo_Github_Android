@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.hhmedic.android.hhdoctorvideodemo">
+
+    <permission
+        android:name="com.hhmedic.app.patient.trtc.demo.new.andpermission.bridge"
+        android:permissionGroup="com.hhmedic.app.patient.trtc.demo.new.andpermission"
+        tools:node="remove"/>
+
+    <application
+        android:name=".application.DoctorApplication"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.SettingAct"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.MultiVideoAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PageTheme" android:exported="true">
+            <intent-filter>
+                <action android:name="com.hhmedic.home" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.CallSelectorAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" android:exported="false">
+            <intent-filter>
+                <action android:name="com.hhmedic.doctor.robot" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".receiver.Controller" android:exported="false">
+            <intent-filter>
+                <action android:name="com.hhmedic.doctor.robot.controller" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.DepartReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.hhmedic.doctor.select.depart" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activity.ViewDetailAct"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

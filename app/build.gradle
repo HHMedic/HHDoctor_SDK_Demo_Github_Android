@@ -1,0 +1,96 @@
+import java.text.SimpleDateFormat
+
+ apply plugin: 'com.android.application'
+
+static def increasedVersionCode() {
+    return (int) (System.currentTimeMillis() / 1000 / 60)
+}
+
+static def buildTime() {
+    def df = new SimpleDateFormat("MMddHH")
+    return df.format(new Date())
+}
+
+//def doctor_sdk_name = "hh_trtc"
+//
+//def doctor_sdk_version = "3.6.8.11291036"
+
+def qmui_version = '2.0.0-alpha11'
+
+android {
+    compileSdkVersion 30
+    defaultConfig {
+        applicationId "com.hhmedic.app.patient.trtc.demo.new"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode increasedVersionCode()
+        versionName "3.6.0.${buildTime()}"
+        multiDexEnabled true
+        ndk {
+            //设置支持的SO库架构
+            abiFilters "armeabi-v7a","armeabi","arm64-v8a"
+        }
+
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+
+    packagingOptions {
+        pickFirst 'lib/armeabi-v7a/libsecsdk.so'
+        pickFirst 'lib/arm64-v8a/libsecsdk.so'
+        pickFirst 'lib/armeabi/libsecsdk.so'
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        dataBinding true
+    }
+
+//    dataBinding {
+//        enabled = true
+//    }
+
+    android.applicationVariants.all { variant ->
+
+        variant.outputs.all
+                {
+
+                    outputFileName = "hh_android_trtc_new_demo_${defaultConfig.versionName}.apk"
+
+                }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.13.1'
+    api "com.qmuiteam:qmui:$qmui_version"
+    implementation 'com.yanzhenjie:permission:2.0.3'
+//    implementation "com.hhmedic.android.sdk:$doctor_sdk_name:$doctor_sdk_version"
+    implementation 'com.zhihu.android:matisse:0.5.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.tencent.bugly:crashreport_upgrade:latest.release'
+
+    implementation 'com.github.HHMedic:hh_medic_sdk_android:3.6.8'
+}

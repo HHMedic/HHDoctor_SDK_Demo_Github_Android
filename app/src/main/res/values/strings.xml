@@ -1,0 +1,102 @@
+<resources>
+    <string name="app_name">新Trtc Demo</string>
+    <string name="user_token">UserToken:</string>
+    <string name="input_user_token">请输入UserToken</string>
+    <string name="is_develop">测试环境</string>
+    <string name="tip_is_in_develop">当前为测试环境</string>
+    <string name="login_button">登录</string>
+    <string name="use_default_token">使用默认登录token</string>
+    <string name="logout_button">登出</string>
+    <string name="call_adult">呼叫成人医生</string>
+    <string name="call_child">呼叫儿童医生</string>
+    <string name="hp_input_hint_order_id">请输入病历订单号</string>
+
+    <string name="hp_sdk_demo_main">SDK主要功能示例</string>
+
+    <string name="hp_call_dept_all">成人</string>
+    <string name="hp_call_dept_child">儿童</string>
+    <string name="hp_view_list">查看病历列表</string>
+    <string name="hp_view_detail">查看病历详情</string>
+    <string name="hp_main_title">请选择类别</string>
+    <string name="hp_medicine_demo">药Demo入口</string>
+    <string name="hp_view_order_list_all">所有成员病历列表</string>
+    <string name="hp_view_order_list">订单列表</string>
+    <string name="hp_view_order_detail">订单详情</string>
+    <string name="hp_view_order_detail_hint">请输入订单ID</string>
+    <string name="hp_view_pay_detail">和豆支付详情</string>
+    <string name="hp_address_manager">地址管理</string>
+    <string name="hp_notice_depart">请选择给儿童看还是成人看</string>
+
+
+    <string name="hp_hint_pid">请输入您需要设定的sdk productId</string>
+    <string name="hp_button_set_pid">设置 SDK ProductID</string>
+    <string name="hp_multi_video">多人视频：陪诊</string>
+    <string name="hp_tip_edit_user_token">请输入被邀请人的userToken</string>
+    <string name="hp_tip_edit_user_name">请输入被邀请人的姓名（选填）</string>
+    <string name="hp_tip_edit_user_photo">请输入被邀请人的头像地址（选填）</string>
+    <string name="hp_button_start_multi_video">开始多人视频：陪诊</string>
+
+    <string name="hp_button_select_user_call">选择成员呼叫</string>
+
+    <string name="hp_button_direct_call">呼叫</string>
+
+    <string name="hp_upload_count">总共上传了%d张图片</string>
+
+    <string name="hp_switch_can_add_member_in_doc">允许档案库添加成员</string>
+
+    <string name="hp_switch_can_buy">开启购买</string>
+
+    <string name="hp_switch_hide_camera_control">显示摄像头关闭按钮</string>
+
+    <string name="hp_switch_close_camera_call">关闭摄像头呼叫</string>
+
+    <string name="hp_switch_close_more_func">关闭首届面更多功能入口</string>
+
+    <string name="hp_switch_can_add_member">允许添加成员</string>
+    <string name="hp_switch_enable_multi_call">开启多人视频</string>
+    <string name="hp_switch_enable_activate">开启激活码激活</string>
+    <string name="hp_switch_enable_medical">开启档案库</string>
+    <string name="hp_switch_enable_user_center">隐藏个人中心</string>
+    <string name="hp_switch_enable_summary_card">过滤咨询总结卡片</string>
+    <string name="hp_switch_enable_medical_card">过滤药卡</string>
+
+    <string name="hp_switch_enable_vip_info">显示会员信息</string>
+
+
+    <string name="hp_button_forward_message">进入消息界面</string>
+    <string name="hp_button_select_call">选人呼叫</string>
+
+    <string name="hp_edit_hint_message_title">请输入Message界面的title</string>
+    <string name="hp_button_set_message_title">设置Message Title</string>
+
+    <string name="hp_edit_hint_ext_message">请输入呼叫需传入的附加数据</string>
+    <string name="hp_button_set_ext_message">设置呼叫附加数据</string>
+
+    <string name="hp_buy_medicine_tips">如果使用购药功能需要向和缓sdk传入国标定位</string>
+    <string name="hp_hint_location_lng">请输入经度</string>
+    <string name="hp_hint_location_lat">请输入纬度</string>
+    <string name="hp_button_set_location">设置经纬度</string>
+    <string name="hh_location_lng">116.431941</string>
+    <string name="hh_location_lat">39.940199</string>
+    <string name="button_close">测试挂断</string>
+
+    <string name="menu_setting">设置SDK配置</string>
+
+    <string name="activity_setting_title">SDK参数配置</string>
+
+    <string name="button_clear_listener">延时60s清除Listener</string>
+
+    <string name="login_for_third_id_info">以下为使用loginForThirdId接口登录区域</string>
+
+    <string name="button_login_third_id">使用三方信息登录</string>
+
+    <string name="place_holder_uid">请输入第三方数据 json</string>
+
+    <string name="place_holder_time">请输入第三方time</string>
+
+    <string name="place_holder_secret">请输入第三方secret</string>
+
+    <string name="init_sdk">初始化SDK</string>
+
+    <string name="third_login_default_info">{"authCode":"6cbdc8b9fd1c439ab71ff678ea683214"}</string>
+</resources>
