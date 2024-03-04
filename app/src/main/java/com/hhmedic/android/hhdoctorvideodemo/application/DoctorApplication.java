@@ -11,7 +11,6 @@ import com.hhmedic.android.hhdoctorvideodemo.activity.LocalConfig;
 import com.hhmedic.android.sdk.HHDoctor;
 import com.hhmedic.android.sdk.config.HHSDKOptions;
 import com.hhmedic.android.sdk.config.MessageOptions;
-import com.tencent.bugly.Bugly;
 
 public class DoctorApplication extends Application {
 
@@ -26,7 +25,6 @@ public class DoctorApplication extends Application {
         super.onCreate();
         initSDK(getApplicationContext());
 //        initTim();
-        Bugly.init(getApplicationContext(), "f9b08d0fa3", false);
     }
 
     public static void initSDK(Context context) {
